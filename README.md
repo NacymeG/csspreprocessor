@@ -1,3 +1,9 @@
+
+        I chose the stylized components because create our own JSX instead of
+        the default tags seems easier to understand.
+   
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
