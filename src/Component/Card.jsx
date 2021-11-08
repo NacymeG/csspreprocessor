@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'semantic-ui-css/semantic.min.css';
+import { Rating } from 'semantic-ui-react';
 
 const CardBorder = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -14,12 +16,15 @@ const UpperCard = styled.div`
 `;
 
 const Title = styled.h1`
+  margin: 0;
+  padding: 8px 0 0 0;
   color: #0d1a26;
   font-weight: 500;
   font-familly: 'Courier New', 'Courier';
 `;
 
 const UnderCard = styled.h1`
+  margin-top: 0;
   padding: 0 8px 0 8px;
   display: flex;
   flex-direction: row;
@@ -38,15 +43,15 @@ const AlbumInfos = styled.div`
   font-size: 10px;
 `;
 
-const Rating = styled.div`
+const Rate = styled.div`
   font-weight: 500;
   font-size: 11px;
   color: #57606f;
 `;
 
-const Stars = styled.div`
-  font-size: 12px;
-`;
+// const Stars = styled.div`
+//   font-size: 12px;
+// `;
 
 const Info = styled.div`
   font-size: 12px;
@@ -62,14 +67,14 @@ const Card = () => {
           alt='album cover'
         />
         <AlbumInfos>
-          <Title>IGOR </Title>
+          <Title>IGOR</Title>
           <Info>Tyler, the Creator</Info>
           <Info>(2019)</Info>
         </AlbumInfos>
       </UpperCard>
       <UnderCard>
-        <Rating>Rate this album</Rating>
-        <Stars>⭐ ⭐ ⭐ ⭐ ⭐</Stars>
+        <Rate>Rate this album</Rate>
+        <Rating icon='star' defaultRating={0} maxRating={5} />
       </UnderCard>
     </CardBorder>
   );
